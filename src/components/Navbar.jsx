@@ -28,10 +28,10 @@ export default function Navbar() {
     <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
       scrolled ? 'bg-brand-black shadow-xl' : 'bg-brand-black/96 backdrop-blur-sm'
     }`}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-24">
 
         <Link to="/" aria-label="Inicio">
-          <img src="/images/logo.png" alt="Acerca Consultores" className="h-14 w-auto" />
+          <img src="/images/logo.png" alt="Acerca Consultores" className="h-20 w-auto" />
         </Link>
 
         {/* Desktop */}
