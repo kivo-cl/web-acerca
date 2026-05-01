@@ -31,7 +31,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
 
         <Link to="/" aria-label="Inicio">
-          <img src="/images/logo.png" alt="Acerca Consultores" className="h-10 w-auto" />
+          <img src="/images/logo.png" alt="Acerca Consultores" className="h-14 w-auto" />
         </Link>
 
         {/* Desktop */}
