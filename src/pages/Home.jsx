@@ -32,60 +32,60 @@ const TESTIMONIOS = [
   {
     name: 'Nobuyuki Noda',
     company: 'Gerente General · Grupo Kintaro',
-    photo: 'https://acercaconsultores.cl/wp-content/uploads/2025/04/7.png',
+    photo: '/images/testimonio-7.png',
     initials: 'NN',
     quote: 'Han pasado 8 años desde que comenzamos este proyecto gastronómico y llegó un momento en que nos dimos cuenta que necesitábamos avanzar estratégicamente. Acerca Consultores nos han brindado las herramientas necesarias para seguir creciendo y trabajando colaborativamente para lograr nuestros objetivos. El profesionalismo y empatía están presentes en todas las intervenciones que Acerca realiza.',
   },
   {
     name: 'Magdalena Lisboa',
     company: 'Maderas Regnans',
-    photo: 'https://acercaconsultores.cl/wp-content/uploads/2025/04/3.png',
+    photo: '/images/testimonio-3.png',
     initials: 'ML',
     quote: 'La experiencia con Nico y Seba de Acerca Consultores ha sido sumamente enriquecedora para nuestra empresa. Tanto el diagnóstico como la consultoría nos han permitido identificar con precisión tanto las falencias como las oportunidades de mejora en nuestros procesos productivos y administrativos.',
   },
   {
     name: 'Alejandro Castillo',
     company: 'Gerente General Bozenlight',
-    photo: 'https://acercaconsultores.cl/wp-content/uploads/2025/04/1.png',
+    photo: '/images/testimonio-1.png',
     initials: 'AC',
     quote: 'El desarrollo del organigrama me aclaró muchísimo las funciones de cada trabajador, sus proyecciones y las necesidades que tenemos de incorporar más gente.',
   },
   {
     name: 'Danitza Irahola',
     company: 'Fundadora Braver Beauty',
-    photo: 'https://acercaconsultores.cl/wp-content/uploads/2025/04/2.png',
+    photo: '/images/testimonio-2.png',
     initials: 'DI',
     quote: 'Me ayudaron a ordenar mis ideas y poder de esta manera construir sobre cimientos sólidos.',
   },
   {
     name: 'María Ester Regueiro, Sebastián Meyer y Carlos Meyer',
     company: 'CAMEDA',
-    photo: 'https://acercaconsultores.cl/wp-content/uploads/2025/04/5.png',
+    photo: '/images/testimonio-5.png',
     initials: 'ME',
     quote: 'Llevamos ya dos años trabajando codo a codo con Acerca, y ha sido un verdadero acierto. Destacamos su profesionalismo y cercanía. En nuestro caso, su asesoría llegó en el momento justo, cuando incorporamos una nueva línea de negocios, siendo clave en la planificación y puesta en marcha de su funcionamiento.',
   },
   {
     name: 'Constanza Orrego',
     company: 'Casa Bloom',
-    photo: 'https://acercaconsultores.cl/wp-content/uploads/2025/04/6.png',
+    photo: '/images/testimonio-6.png',
     initials: 'CO',
     quote: 'Queremos agradecer enormemente a Nico y Seba de Acerca por la ayuda que nos entregaron con nuestro proyecto Casa Bloom!. Su orientación no solo nos ayudó a entender mejor el negocio y manejar los números, sino que también nos dieron el empuje necesario para tomar acción.',
   },
   {
     name: 'Jorge Böher',
     company: 'Director y Cofundador de Centro Amülen',
-    photo: 'https://acercaconsultores.cl/wp-content/uploads/2025/04/4.png',
+    photo: '/images/testimonio-4.png',
     initials: 'JB',
     quote: 'Nuestro emprendimiento tiene 10 años de vida. Contratamos los servicios de Acerca consultores un año, y en ese año crecimos como empresa más que en todos los anteriores.',
   },
 ]
 
 const LOGOS = [
-  { src: 'https://cotiza.acercaconsultores.cl/images/logo-regnans.png',  alt: 'Maderas Regnans'   },
-  { src: 'https://cotiza.acercaconsultores.cl/images/logo-outlet.png',   alt: 'Outlet de Puertas' },
-  { src: 'https://cotiza.acercaconsultores.cl/images/logo-cimalat.png',  alt: 'Cimalat'           },
-  { src: 'https://cotiza.acercaconsultores.cl/images/logo-bigboba.png',  alt: 'Big Boba'          },
-  { src: 'https://cotiza.acercaconsultores.cl/images/logo-ramen.png',    alt: 'Ramen'             },
+  { src: '/images/logo-regnans.png',  alt: 'Maderas Regnans'   },
+  { src: '/images/logo-outlet.png',   alt: 'Outlet de Puertas' },
+  { src: '/images/logo-cimalat.png',  alt: 'Cimalat'           },
+  { src: '/images/logo-bigboba.png',  alt: 'Big Boba'          },
+  { src: '/images/logo-ramen.png',    alt: 'Ramen'             },
 ]
 
 const FACTURACION = [
@@ -148,7 +148,7 @@ function LogoSlider() {
             <img
               src={logo.src}
               alt={logo.alt}
-              className="h-14 max-w-[180px] object-contain grayscale opacity-40 hover:opacity-70 transition-opacity duration-300"
+              className="h-20 max-w-[220px] object-contain grayscale opacity-40 hover:opacity-70 transition-opacity duration-300"
             />
           </div>
         ))}
