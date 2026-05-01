@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import { MapPin, Phone, Mail, Instagram, Linkedin } from 'lucide-react'
-import Logo from './Logo'
 import { WA_LINK, WA_PHONE, EMAIL, ADDRESS } from '../constants'
 
 const NAV_LINKS = [
@@ -18,7 +17,9 @@ export default function Footer() {
 
           {/* Brand */}
           <div>
-            <Logo inverted size="sm" />
+            <Link to="/" aria-label="Inicio">
+              <img src="/images/logo.png" alt="Acerca Consultores" className="h-28 w-auto" />
+            </Link>
             <p className="mt-6 text-brand-grey text-sm leading-relaxed max-w-xs">
               Acerca Consultores ayuda a las Pymes a ordenar, planificar y optimizar su gestión para un crecimiento sostenible y rentable.
             </p>
