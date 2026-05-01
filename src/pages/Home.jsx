@@ -148,7 +148,7 @@ function LogoSlider() {
             <img
               src={logo.src}
               alt={logo.alt}
-              className="h-9 max-w-[130px] object-contain grayscale opacity-40 hover:opacity-70 transition-opacity duration-300"
+              className="h-14 max-w-[180px] object-contain grayscale opacity-40 hover:opacity-70 transition-opacity duration-300"
             />
           </div>
         ))}
