@@ -251,12 +251,12 @@ export default function Home() {
           <div className="absolute left-0 top-12 bottom-12 w-px bg-brand-orange/25" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full pt-32 pb-24">
-          <div className="lg:max-w-[56%]">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full pt-36 pb-20">
+          <div className="lg:max-w-[54%]">
             <motion.span
               initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15, duration: 0.5 }}
-              className="inline-block border border-brand-orange text-brand-orange text-xs font-semibold tracking-[0.22em] uppercase px-4 py-1.5 mb-10"
+              className="inline-block border border-brand-orange text-brand-orange text-xs font-semibold tracking-[0.22em] uppercase px-4 py-1.5 mb-7"
             >
               Consultoría Estratégica
             </motion.span>
@@ -264,7 +264,7 @@ export default function Home() {
             <motion.h1
               initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25, duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
-              className="text-4xl sm:text-6xl lg:text-7xl font-black text-white leading-[0.93] tracking-tight mb-8"
+              className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-[1.05] tracking-tight mb-6"
             >
               Del diagnóstico a la acción: consultoría estratégica para empresas que quieren escalar con orden.
             </motion.h1>
@@ -272,7 +272,7 @@ export default function Home() {
             <motion.p
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-brand-grey text-xl sm:text-2xl font-light max-w-xl mb-12"
+              className="text-brand-grey text-base sm:text-lg font-light max-w-lg mb-10"
             >
               Trabajamos con medianas y grandes empresas para ordenar su gestión, diseñar su estrategia y escalar con método.
             </motion.p>
@@ -280,11 +280,11 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.55, duration: 0.5 }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-wrap gap-3"
             >
               <CTAButton>Agenda una reunión sin costo</CTAButton>
               <a href="/servicios"
-                className="inline-flex items-center gap-2 text-white/70 text-sm font-semibold hover:text-white transition-colors border border-white/20 px-7 py-3.5 hover:border-white/40">
+                className="inline-flex items-center gap-2 text-white/70 text-sm font-semibold hover:text-white transition-colors border border-white/20 px-6 py-3 hover:border-white/40">
                 Ver servicios
               </a>
             </motion.div>
