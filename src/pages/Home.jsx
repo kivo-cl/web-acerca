@@ -514,23 +514,38 @@ export default function Home() {
       </section>
 
       {/* ═══════════════════════ CTA FINAL ═══════════════════════ */}
-      <section className="relative py-28 overflow-hidden">
-        <img src="https://picsum.photos/seed/acerca-cta/1600/700" alt=""
-          className="absolute inset-0 w-full h-full object-cover grayscale" />
-        <div className="absolute inset-0 bg-brand-black/88" />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <AnimatedSection>
-            <span className="inline-block border border-brand-orange text-brand-orange text-xs font-semibold tracking-[0.22em] uppercase px-4 py-1.5 mb-8">
-              Primera reunión sin costo
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight max-w-3xl mx-auto mb-6">
-              El primer paso hacia una empresa más ordenada, rentable y escalable.
-            </h2>
-            <p className="text-brand-grey text-lg mb-10 max-w-xl mx-auto">
-              Agenda una reunión sin costo y te mostramos cómo podemos ayudarte.
-            </p>
-            <CTAButton variant="outline" href={WA_LINK}>Agenda una reunión sin costo</CTAButton>
-          </AnimatedSection>
+      <section className="overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[520px]">
+
+          {/* Left — text on black */}
+          <div className="bg-brand-black flex items-center px-10 lg:px-16 xl:px-20 py-20">
+            <AnimatedSection>
+              <span className="inline-block border border-brand-orange text-brand-orange text-xs font-semibold tracking-[0.22em] uppercase px-4 py-1.5 mb-8">
+                Primera reunión sin costo
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-black text-white leading-tight mb-6">
+                El primer paso hacia una empresa más ordenada, rentable y escalable.
+              </h2>
+              <p className="text-brand-grey text-lg mb-10 leading-relaxed">
+                Agenda una reunión sin costo y te mostramos cómo podemos ayudarte.
+              </p>
+              <CTAButton href={WA_LINK}>Agenda una reunión sin costo</CTAButton>
+            </AnimatedSection>
+          </div>
+
+          {/* Right — image */}
+          <motion.div
+            className="relative overflow-hidden min-h-[360px] lg:min-h-0"
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.9, ease: [0.25, 0.1, 0.25, 1] }}
+          >
+            <img src="https://picsum.photos/seed/acerca-cta/1000/800" alt=""
+              className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-brand-black/20" />
+          </motion.div>
+
         </div>
       </section>
 
