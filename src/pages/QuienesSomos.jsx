@@ -15,7 +15,7 @@ const EQUIPO = [
     name: 'Sebastián Ortiz Ipinza',
     role: 'Socio / Consultor',
     specialty: 'Ingeniero Comercial Universidad Diego Portales | Curso BI con Python',
-    bio: 'Amplios conocimientos contables, financieros y en el desarrollo e implementación de herramientas de control de gestión en pymes y startups chilenas y extranjeras, con especial énfasis en obtener y procesar información que permita una gestión del negocio basada en la medición de resultados.',
+    bio: 'Amplios conocimientos contables, financieros y en el desarrollo e implementación de herramientas de control de gestión en medianas y grandes empresas chilenas y extranjeras, con especial énfasis en obtener y procesar información que permita una gestión del negocio basada en la medición de resultados.',
     photo: '/images/equipo-sebastian.png',
   },
   {
@@ -74,7 +74,7 @@ export default function QuienesSomos() {
             <span className="text-brand-orange text-xs font-semibold tracking-[0.22em] uppercase">La consultora</span>
             <h1 className="text-5xl sm:text-6xl font-black text-white mt-3 leading-tight">Quiénes Somos</h1>
             <p className="text-brand-grey text-lg mt-4 max-w-2xl leading-relaxed">
-              Somos un equipo apasionado por el orden y la planificación, dedicado a implementar herramientas de gestión para profesionalizar los negocios de nuestros clientes.
+              Somos un equipo apasionado por el orden y la estrategia, dedicado a acompañar a medianas y grandes empresas en su proceso de crecimiento con método, claridad y resultados medibles.
             </p>
           </motion.div>
         </div>
@@ -106,10 +106,10 @@ export default function QuienesSomos() {
             <AnimatedSection delay={0.15}>
               <span className="text-brand-orange text-xs font-semibold tracking-[0.22em] uppercase">Nuestra cultura</span>
               <h2 className="text-4xl sm:text-5xl font-black text-brand-black mt-3 mb-6 leading-tight">
-                Trabajamos para apoyar, ayudar y enseñar.
+                Trabajamos para ordenar, estructurar y hacer crecer.
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-10">
-                Para nosotros la cercanía es una consecuencia de la confianza, la cual se logra mediante la responsabilidad, la planificación, el orden, el seguimiento y la formalidad de los canales de comunicación, y esperamos que estas buenas prácticas sean adoptadas por nuestros clientes.
+                Para nosotros la cercanía es consecuencia de la confianza, y la confianza se construye con responsabilidad, planificación, orden y seguimiento. Acompañamos a medianas y grandes empresas con método y criterio estratégico, siendo socios reales de sus procesos de crecimiento.
               </p>
               <div className="grid grid-cols-2 gap-3 mb-10">
                 {PILARES.map((pilar, i) => (
@@ -125,7 +125,7 @@ export default function QuienesSomos() {
                   </motion.div>
                 ))}
               </div>
-              <CTAButton>Solicita una reunión</CTAButton>
+              <CTAButton>Agenda una reunión sin costo</CTAButton>
             </AnimatedSection>
           </div>
         </div>
