@@ -193,7 +193,7 @@ export default function Contacto() {
               {/* WhatsApp CTA card */}
               <div className="mt-12 bg-brand-black p-8">
                 <p className="text-white font-black text-xl mb-3 leading-tight">
-                  ¿Preferís hablar directamente?
+                  ¿Prefieres hablar directamente?
                 </p>
                 <p className="text-brand-grey text-sm mb-6 leading-relaxed">
                   Escríbenos por WhatsApp y agendamos una reunión en minutos.

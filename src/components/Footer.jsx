@@ -75,8 +75,9 @@ export default function Footer() {
             © Copyright Acerca Consultores 2025. Todos los derechos reservados.
           </p>
           <p className="text-brand-grey text-xs">
-            <a href="https://acercaconsultores.cl" className="hover:text-white transition-colors">
-              acercaconsultores.cl
+            Hecho por{' '}
+            <a href="https://pagelab.cl" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+              Pagelab
             </a>
           </p>
         </div>

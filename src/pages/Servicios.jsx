@@ -85,24 +85,6 @@ export default function Servicios() {
         </div>
       </section>
 
-      {/* ─── SERVICIOS DESTACADOS ─── */}
-      <section className="py-16 bg-[#f5f4f0] border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <AnimatedSection>
-            <span className="text-brand-orange text-xs font-semibold tracking-[0.22em] uppercase mb-6 block">Servicios punta de lanza</span>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-gray-200">
-              {SERVICIOS.filter(s => s.featured).map((s) => (
-                <div key={s.id} className="bg-white p-8">
-                  <span className="text-brand-orange font-black text-xs tracking-[0.22em] uppercase">{s.id}</span>
-                  <h3 className="font-black text-brand-black text-lg mt-3 mb-2 leading-tight">{s.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
-                </div>
-              ))}
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
       {/* ─── TODOS LOS SERVICIOS ─── */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">

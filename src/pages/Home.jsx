@@ -552,19 +552,35 @@ export default function Home() {
       {/* ═══════════════════════ FORMULARIO ═══════════════════════ */}
       <section id="formulario" className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+
+            {/* Left — CTA copy */}
             <AnimatedSection>
-              <div className="text-center mb-12">
-                <span className="text-brand-orange text-xs font-semibold tracking-[0.22em] uppercase">Reunión sin costo</span>
-                <h2 className="text-4xl sm:text-5xl font-black text-brand-black mt-3 mb-5 leading-tight">
-                  Cuéntanos sobre tu empresa
-                </h2>
-                <p className="text-gray-500 text-base leading-relaxed">
-                  Agenda una reunión sin costo y te ayudaremos a estructurar un plan estratégico a la medida de tu empresa.
-                </p>
-              </div>
+              <span className="text-brand-orange text-xs font-semibold tracking-[0.22em] uppercase">Reunión sin costo</span>
+              <h2 className="text-4xl sm:text-5xl font-black text-brand-black mt-3 mb-6 leading-tight">
+                El diagnóstico que tu empresa necesitaba.
+              </h2>
+              <p className="text-gray-500 text-lg leading-relaxed mb-10">
+                En la primera reunión analizamos tu situación, identificamos las brechas más críticas y te proponemos un camino claro. Sin compromiso, sin costo.
+              </p>
+              <ul className="space-y-5">
+                {[
+                  'Primera reunión completamente sin costo',
+                  'Diagnóstico inicial de tu situación empresarial',
+                  'Consultores con experiencia real en medianas y grandes empresas',
+                  'Metodología comprobada con más de 50 empresas acompañadas',
+                  'Inteligencia artificial aplicada al análisis y la estrategia',
+                  'Resultados medibles desde el primer mes de trabajo',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-2 shrink-0" />
+                    <span className="text-gray-600 text-base leading-snug">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </AnimatedSection>
 
+            {/* Right — Form */}
             <AnimatedSection delay={0.15}>
               {isSubmitSuccessful ? (
                 <div className="text-center py-16 border border-gray-200">
@@ -615,6 +631,7 @@ export default function Home() {
                 </form>
               )}
             </AnimatedSection>
+
           </div>
         </div>
       </section>

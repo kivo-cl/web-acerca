@@ -135,34 +135,60 @@ export default function QuienesSomos() {
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
+          {/* Socios */}
           <AnimatedSection>
             <div className="mb-14">
-              <span className="text-brand-orange text-xs font-semibold tracking-[0.22em] uppercase">Profesionales</span>
+              <span className="text-brand-orange text-xs font-semibold tracking-[0.22em] uppercase">Socios fundadores</span>
               <h2 className="text-4xl sm:text-5xl font-black text-brand-black mt-3 leading-tight max-w-lg">El Equipo</h2>
             </div>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {EQUIPO.map((m, i) => (
-              <AnimatedSection key={m.name} delay={i * 0.07}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+            {EQUIPO.slice(0, 2).map((m, i) => (
+              <AnimatedSection key={m.name} delay={i * 0.1}>
                 <div className="group h-full flex flex-col overflow-hidden border border-gray-100 hover:border-brand-orange/30 hover:shadow-lg transition-all duration-400">
-
-                  {/* Photo */}
-                  <div className="relative h-64 overflow-hidden shrink-0">
+                  <div className="relative h-96 overflow-hidden shrink-0">
                     <img
                       src={m.photo}
                       alt={`Foto de ${m.name}`}
                       className="w-full h-full object-cover object-top transition-transform duration-600 group-hover:scale-[1.05]"
                     />
-                    {/* Gradient at bottom */}
                     <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-brand-black/60 to-transparent" />
-                    {/* Orange hover line */}
                     <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-orange scale-x-0 group-hover:scale-x-100 transition-transform duration-400 origin-left" />
                   </div>
+                  <div className="p-8 flex-1 flex flex-col">
+                    <h3 className="font-black text-brand-black text-xl leading-tight mb-1">{m.name}</h3>
+                    <p className="text-brand-orange text-xs font-semibold tracking-wide uppercase mb-3">{m.role}</p>
+                    <p className="text-brand-grey text-xs mb-4 leading-relaxed">{m.specialty}</p>
+                    <p className="text-gray-500 text-sm leading-relaxed flex-1">{m.bio}</p>
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
 
-                  {/* Content */}
+          {/* Equipo extendido */}
+          <AnimatedSection>
+            <div className="mb-10 mt-16 pt-10 border-t border-gray-100">
+              <span className="text-brand-orange text-xs font-semibold tracking-[0.22em] uppercase">Equipo especialista</span>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+            {EQUIPO.slice(2).map((m, i) => (
+              <AnimatedSection key={m.name} delay={i * 0.07}>
+                <div className="group h-full flex flex-col overflow-hidden border border-gray-100 hover:border-brand-orange/30 hover:shadow-lg transition-all duration-400">
+                  <div className="relative h-56 overflow-hidden shrink-0">
+                    <img
+                      src={m.photo}
+                      alt={`Foto de ${m.name}`}
+                      className="w-full h-full object-cover object-top transition-transform duration-600 group-hover:scale-[1.05]"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-brand-black/60 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-orange scale-x-0 group-hover:scale-x-100 transition-transform duration-400 origin-left" />
+                  </div>
                   <div className="p-6 flex-1 flex flex-col">
-                    <h3 className="font-black text-brand-black text-lg leading-tight mb-1">{m.name}</h3>
+                    <h3 className="font-black text-brand-black text-base leading-tight mb-1">{m.name}</h3>
                     <p className="text-brand-orange text-xs font-semibold tracking-wide uppercase mb-3">{m.role}</p>
                     <p className="text-brand-grey text-xs mb-3 leading-relaxed">{m.specialty}</p>
                     <p className="text-gray-500 text-sm leading-relaxed flex-1">{m.bio}</p>
@@ -171,6 +197,7 @@ export default function QuienesSomos() {
               </AnimatedSection>
             ))}
           </div>
+
         </div>
       </section>
 
