@@ -52,7 +52,7 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Solicitar reunión por WhatsApp"
-            className="bg-brand-orange text-white text-sm font-semibold px-5 py-2.5 hover:bg-brand-orange-lt transition-colors"
+            className="bg-brand-orange text-white text-sm font-semibold px-5 py-2.5 lg:px-7 lg:py-3 hover:bg-brand-orange-lt transition-colors"
           >
             Solicita una reunión
           </a>

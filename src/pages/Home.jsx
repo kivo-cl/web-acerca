@@ -104,7 +104,7 @@ const FACTURACION = [
 
 /* ─── Sub-components ─────────────────────────────────────────────────────── */
 
-function StatCounter({ value, label, duration = 2000 }) {
+function StatCounter({ value, label, duration = 2000, prefix = '', suffix = '' }) {
   const ref = useRef(null)
   const [active, setActive] = useState(false)
   const [count, setCount]   = useState(0)
@@ -133,9 +133,14 @@ function StatCounter({ value, label, duration = 2000 }) {
   }, [active, value, duration])
 
   return (
-    <div ref={ref} className="text-center">
-      <div className="font-black text-brand-orange tabular-nums leading-none" style={{ fontSize: 'clamp(3.5rem, 7vw, 5.5rem)' }}>
-        +{count.toLocaleString('es-CL')}
+    <div ref={ref} className="text-center flex flex-col items-center justify-start">
+      <div className="flex flex-row items-baseline justify-center">
+        <div className="font-black text-brand-orange leading-none" style={{ fontSize: '64px' }}>
+          {prefix}{count}
+        </div>
+        {suffix && (
+          <div className="font-black text-brand-orange leading-none ml-3" style={{ fontSize: '64px' }}>{suffix}</div>
+        )}
       </div>
       <div className="text-white/60 text-xs font-semibold tracking-[0.2em] uppercase mt-4">{label}</div>
     </div>
@@ -166,7 +171,7 @@ function LogoSlider() {
 
 function TestimonialCard({ t }) {
   return (
-    <div className="min-w-[360px] max-w-[360px] h-[340px] border border-gray-200 p-8 flex flex-col bg-white hover:border-brand-orange/40 hover:shadow-md transition-all duration-300 shrink-0">
+    <div className="min-w-[360px] max-w-[360px] lg:min-w-[420px] lg:max-w-[420px] h-[340px] lg:h-[380px] border border-gray-200 p-8 lg:p-10 flex flex-col bg-white hover:border-brand-orange/40 hover:shadow-md transition-all duration-300 shrink-0">
       <span className="text-3xl text-brand-orange font-black leading-none mb-4 select-none">"</span>
       <p className="text-gray-600 text-sm leading-relaxed flex-1 italic"
         style={{ display: '-webkit-box', WebkitLineClamp: 6, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
@@ -264,7 +269,7 @@ export default function Home() {
             <motion.h1
               initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25, duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
-              className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-[1.05] tracking-tight mb-6"
+              className="text-3xl sm:text-4xl lg:text-6xl font-black text-white leading-[1.05] tracking-tight mb-6"
             >
               Del diagnóstico a la acción: consultoría estratégica para empresas que quieren escalar con orden.
             </motion.h1>
@@ -272,7 +277,7 @@ export default function Home() {
             <motion.p
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-brand-grey text-base sm:text-lg font-light max-w-lg mb-10"
+              className="text-brand-grey text-base sm:text-lg lg:text-xl font-light max-w-lg mb-10"
             >
               Trabajamos con medianas y grandes empresas para ordenar su gestión, diseñar su estrategia y escalar con método.
             </motion.p>
@@ -284,7 +289,7 @@ export default function Home() {
             >
               <CTAButton>Agenda una reunión sin costo</CTAButton>
               <a href="/servicios"
-                className="inline-flex items-center gap-2 text-white/70 text-sm font-semibold hover:text-white transition-colors border border-white/20 px-6 py-3 hover:border-white/40">
+                className="inline-flex items-center gap-2 text-white/70 text-sm lg:text-base font-semibold hover:text-white transition-colors border border-white/20 px-6 py-3 lg:px-8 lg:py-4 hover:border-white/40">
                 Ver servicios
               </a>
             </motion.div>
@@ -304,9 +309,9 @@ export default function Home() {
       <section className="py-20 lg:py-24 bg-brand-black border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-8">
-            <StatCounter value={50}   label="Empresas"             duration={1600} />
-            <StatCounter value={1200} label="Horas de Consultoría" duration={2200} />
-            <StatCounter value={75}   label="Procesos Diseñados"    duration={1800} />
+            <StatCounter value={50} label="Empresas acompañadas"          duration={1600} prefix="+" />
+            <StatCounter value={6}  label="en el mercado chileno"          duration={1400} prefix="+" suffix="Años" />
+            <StatCounter value={7}  label="de diagnóstico por proyecto"    duration={1200} suffix="Áreas" />
           </div>
         </div>
       </section>
@@ -320,7 +325,7 @@ export default function Home() {
           <AnimatedSection>
             <div className="mb-16">
               <span className="text-brand-orange text-xs font-semibold tracking-[0.22em] uppercase">Metodología</span>
-              <h2 className="text-4xl sm:text-5xl font-black text-brand-black mt-3 leading-tight max-w-lg">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-black mt-3 leading-tight max-w-lg">
                 Así trabajamos
               </h2>
             </div>
@@ -362,7 +367,7 @@ export default function Home() {
           <div className="bg-[#f5f4f0] flex items-center px-10 lg:px-16 xl:px-20 py-16">
             <AnimatedSection delay={0.15}>
               <span className="text-brand-orange text-xs font-semibold tracking-[0.22em] uppercase">Acerca Consultores</span>
-              <h2 className="text-4xl sm:text-5xl font-black text-brand-black mt-3 mb-6 leading-tight">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-black mt-3 mb-6 leading-tight">
                 Estrategia, datos y ejecución: así transformamos empresas
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-4">
@@ -382,7 +387,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <AnimatedSection>
             <span className="text-brand-orange text-xs font-semibold tracking-[0.22em] uppercase">Diferenciadores</span>
-            <h2 className="text-4xl sm:text-5xl font-black text-white mt-3 mb-16 leading-tight max-w-2xl">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mt-3 mb-16 leading-tight max-w-2xl">
               Lo que nos hace distintos
             </h2>
           </AnimatedSection>
@@ -420,7 +425,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <AnimatedSection>
             <span className="text-brand-orange text-xs font-semibold tracking-[0.22em] uppercase">Diagnóstico</span>
-            <h2 className="text-4xl sm:text-5xl font-black text-brand-black mt-3 mb-16 max-w-xl leading-tight">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-black mt-3 mb-16 max-w-xl leading-tight">
               Problemáticas que resolvemos
             </h2>
           </AnimatedSection>
@@ -450,7 +455,7 @@ export default function Home() {
             <div className="w-full">
               <AnimatedSection>
                 <span className="text-brand-orange text-xs font-semibold tracking-[0.22em] uppercase">Por qué elegirnos</span>
-                <h2 className="text-4xl sm:text-5xl font-black text-white mt-3 mb-6 leading-tight">
+                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mt-3 mb-6 leading-tight">
                   El socio estratégico que tu empresa necesita
                 </h2>
                 <p className="text-brand-grey text-lg leading-relaxed mb-10">
@@ -498,7 +503,7 @@ export default function Home() {
             <div className="flex items-end justify-between flex-wrap gap-4">
               <div>
                 <span className="text-brand-orange text-xs font-semibold tracking-[0.22em] uppercase">Testimonios</span>
-                <h2 className="text-4xl sm:text-5xl font-black text-brand-black mt-3">Lo que dicen nuestros clientes</h2>
+                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-black mt-3">Lo que dicen nuestros clientes</h2>
                 <p className="text-gray-400 text-base mt-2">
                   Ellos confiaron en nuestro trabajo. Los resultados hablan por sí solos.
                 </p>
@@ -523,7 +528,7 @@ export default function Home() {
               <span className="inline-block border border-brand-orange text-brand-orange text-xs font-semibold tracking-[0.22em] uppercase px-4 py-1.5 mb-8">
                 Primera reunión sin costo
               </span>
-              <h2 className="text-3xl sm:text-4xl font-black text-white leading-tight mb-6">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-6">
                 El primer paso hacia una empresa más ordenada, rentable y escalable.
               </h2>
               <p className="text-brand-grey text-lg mb-10 leading-relaxed">
@@ -557,7 +562,7 @@ export default function Home() {
             {/* Left — CTA copy */}
             <AnimatedSection>
               <span className="text-brand-orange text-xs font-semibold tracking-[0.22em] uppercase">Reunión sin costo</span>
-              <h2 className="text-4xl sm:text-5xl font-black text-brand-black mt-3 mb-6 leading-tight">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-brand-black mt-3 mb-6 leading-tight">
                 El diagnóstico que tu empresa necesitaba.
               </h2>
               <p className="text-gray-500 text-lg leading-relaxed mb-10">
