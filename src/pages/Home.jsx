@@ -247,7 +247,7 @@ export default function Home() {
 
         <div className="absolute right-0 top-0 h-full w-[45%] hidden lg:block overflow-hidden">
           <motion.img
-            src="https://picsum.photos/seed/acerca-hero/900/1100"
+            src="/images/hero.png"
             alt=""
             className="w-full h-full object-cover grayscale opacity-45"
             style={{ y: heroImgY }}
