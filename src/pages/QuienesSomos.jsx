@@ -116,16 +116,17 @@ export default function QuienesSomos() {
             </div>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-14">
             {SOCIOS.map((m, i) => (
               <AnimatedSection key={m.name} delay={i * 0.1}>
-                <div className="h-full flex flex-col overflow-hidden border border-gray-100">
-                  <div className="shrink-0">
+                <div className="h-full flex flex-col overflow-hidden bg-white border border-gray-100 shadow-sm">
+                  <div className="relative aspect-[3/4] overflow-hidden shrink-0">
                     <img
                       src={m.photo}
                       alt={`Foto de ${m.name}`}
-                      className="w-full h-auto block"
+                      className="w-full h-full object-cover object-top"
                     />
+                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-orange" />
                   </div>
                   <div className="p-8 flex-1 flex flex-col">
                     <h3 className="font-black text-brand-black text-xl leading-tight mb-1">{m.name}</h3>
@@ -141,17 +142,18 @@ export default function QuienesSomos() {
           {/* Daniel */}
           <AnimatedSection delay={0.1}>
             <div className="flex justify-center">
-              <div className="w-full max-w-xs flex flex-col overflow-hidden border border-gray-100">
-                <div className="shrink-0">
+              <div className="w-full max-w-[280px] flex flex-col overflow-hidden bg-white border border-gray-100 shadow-sm">
+                <div className="relative aspect-[3/4] overflow-hidden shrink-0">
                   <img
                     src={DANIEL.photo}
                     alt={`Foto de ${DANIEL.name}`}
-                    className="w-full h-auto block"
+                    className="w-full h-full object-cover object-top"
                   />
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-orange" />
                 </div>
-                <div className="p-6 flex flex-col">
+                <div className="p-5 flex flex-col">
                   <h3 className="font-black text-brand-black text-base leading-tight mb-1">{DANIEL.name}</h3>
-                  <p className="text-brand-orange text-xs font-semibold tracking-wide uppercase mb-3">{DANIEL.role}</p>
+                  <p className="text-brand-orange text-xs font-semibold tracking-wide uppercase mb-2">{DANIEL.role}</p>
                   <p className="text-brand-grey text-xs mb-3 leading-relaxed">{DANIEL.specialty}</p>
                   <p className="text-gray-500 text-sm leading-relaxed">{DANIEL.bio}</p>
                 </div>
