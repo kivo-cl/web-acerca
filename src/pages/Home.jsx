@@ -308,7 +308,7 @@ export default function Home() {
       <section className="py-20 lg:py-24 bg-brand-black border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-8">
-            <StatCounter value={50} label="Empresas acompañadas"          duration={1600} prefix="+" />
+            <StatCounter value={100} label="Empresas acompañadas"          duration={1600} prefix="+" />
             <StatCounter value={6}  label="en el mercado chileno"          duration={1400} prefix="+" suffix="Años" />
             <StatCounter value={7}  label="de diagnóstico por proyecto"    duration={1200} suffix="Áreas" />
           </div>
@@ -572,7 +572,7 @@ export default function Home() {
                   'Primera reunión completamente sin costo',
                   'Diagnóstico inicial de tu situación empresarial',
                   'Consultores con experiencia real en medianas y grandes empresas',
-                  'Metodología comprobada con más de 50 empresas acompañadas',
+                  'Metodología comprobada con más de 100 empresas acompañadas',
                   'Inteligencia artificial aplicada al análisis y la estrategia',
                   'Resultados medibles desde el primer mes de trabajo',
                 ].map((item, i) => (
