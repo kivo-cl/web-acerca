@@ -3,7 +3,7 @@ import AnimatedSection from '../components/AnimatedSection'
 import CTAButton from '../components/CTAButton'
 
 /* Placeholder photos — replace with real team photos */
-const EQUIPO = [
+const SOCIOS = [
   {
     name: 'Nicolás Chocaír Salas',
     role: 'Socio / Consultor principal',
@@ -18,42 +18,15 @@ const EQUIPO = [
     bio: 'Amplios conocimientos contables, financieros y en el desarrollo e implementación de herramientas de control de gestión en medianas y grandes empresas chilenas y extranjeras, con especial énfasis en obtener y procesar información que permita una gestión del negocio basada en la medición de resultados.',
     photo: '/images/equipo-sebastian.png',
   },
-  {
-    name: 'Daniel Alvarado Landázuri',
-    role: 'Abogado',
-    specialty: 'Derecho Corporativo, Laboral y Compliance',
-    bio: 'Amplia experiencia en asesoría a empresas del sector público y privado, nacionales y extranjeras. Ha liderado juicios laborales, civiles y arbitrales, así como negociaciones extrajudiciales de alto impacto. Su enfoque en prevención de riesgos y cumplimiento normativo le permite guiar a empresas en la toma de decisiones estratégicas. Además, su experiencia como emprendedor e inversionista le otorga una visión integral del mundo empresarial.',
-    photo: '/images/equipo-daniel.jpg',
-  },
-  {
-    name: 'Juan Monroy Ceura',
-    role: 'Contador Auditor',
-    specialty: 'Gestión administrativa, auditoría interna, presupuesto y análisis estadístico',
-    bio: 'Amplia experiencia en gestión administrativa, auditoría interna, presupuesto y análisis estadístico. Actualmente, Gerente General en Centro Integral de Negocios LTDA, donde lidera la planificación estratégica, coordinación y control de la institución. Especialista en optimización de procesos y toma de decisiones estratégicas para el desarrollo organizacional.',
-    photo: '/images/equipo-juan.jpeg',
-  },
-  {
-    name: 'Sergio Puebla Charme',
-    role: 'Empresario / Consultor',
-    specialty: 'Expansión de negocios, gestión de franquicias y optimización operativa',
-    bio: 'Emprendedor en la industria de las pizzas, creador y gestor de la marca Oh My Pizza!, con experiencia en expansión de negocios, gestión de franquicias y optimización operativa. Profesional con trayectoria en ventas, negociación y liderazgo de equipos, enfocado en resultados y desarrollo estratégico, asegurando crecimiento sostenido y alta satisfacción de clientes.',
-    photo: '/images/equipo-sergio.jpg',
-  },
-  {
-    name: 'Constanza Villalobos Escobar',
-    role: 'Abogada',
-    specialty: 'Asesoría legal para negocios',
-    bio: 'Especializada en estructuración empresarial, cumplimiento normativo y mentoría para emprendedores. Apasionada por guiar a empresas en su desarrollo, brindando soluciones estratégicas en materia legal y corporativa. Su enfoque combina conocimiento jurídico con una visión práctica, permitiendo a sus clientes operar con seguridad y crecimiento sostenible.',
-    photo: '/images/equipo-constanza.jpeg',
-  },
-  {
-    name: 'Ignacio Silva Pacheco',
-    role: 'Ingeniero Comercial / Especialista Marketing Digital',
-    specialty: 'Performance Digital, SEM, Paid Media y Estrategia Digital',
-    bio: 'Especialista en Marketing Digital y Growth Marketing, con experiencia en la planificación y optimización de campañas publicitarias y estrategias de adquisición de clientes, combinando análisis de datos y creatividad para maximizar el retorno de inversión (ROI). Su expertise en medios pagados y estrategias de crecimiento le permite impulsar marcas y negocios en entornos altamente competitivos.',
-    photo: '/images/equipo-ignacio.jpeg',
-  },
 ]
+
+const DANIEL = {
+  name: 'Daniel Alvarado Landázuri',
+  role: 'Abogado',
+  specialty: 'Derecho Corporativo, Laboral y Compliance',
+  bio: 'Amplia experiencia en asesoría a empresas del sector público y privado, nacionales y extranjeras. Ha liderado juicios laborales, civiles y arbitrales, así como negociaciones extrajudiciales de alto impacto. Su enfoque en prevención de riesgos y cumplimiento normativo le permite guiar a empresas en la toma de decisiones estratégicas. Además, su experiencia como emprendedor e inversionista le otorga una visión integral del mundo empresarial.',
+  photo: '/images/equipo-daniel.jpg',
+}
 
 const PILARES = ['Clara', 'Estructurada', 'Cercana', 'Con Método']
 
@@ -143,18 +116,16 @@ export default function QuienesSomos() {
             </div>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-            {EQUIPO.slice(0, 2).map((m, i) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+            {SOCIOS.map((m, i) => (
               <AnimatedSection key={m.name} delay={i * 0.1}>
-                <div className="group h-full flex flex-col overflow-hidden border border-gray-100 hover:border-brand-orange/30 hover:shadow-lg transition-all duration-400">
-                  <div className="relative h-96 overflow-hidden shrink-0">
+                <div className="h-full flex flex-col overflow-hidden border border-gray-100">
+                  <div className="shrink-0">
                     <img
                       src={m.photo}
                       alt={`Foto de ${m.name}`}
-                      className="w-full h-full object-cover object-top transition-transform duration-600 group-hover:scale-[1.05]"
+                      className="w-full h-auto block"
                     />
-                    <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-brand-black/60 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-orange scale-x-0 group-hover:scale-x-100 transition-transform duration-400 origin-left" />
                   </div>
                   <div className="p-8 flex-1 flex flex-col">
                     <h3 className="font-black text-brand-black text-xl leading-tight mb-1">{m.name}</h3>
@@ -167,36 +138,26 @@ export default function QuienesSomos() {
             ))}
           </div>
 
-          {/* Equipo extendido */}
-          <AnimatedSection>
-            <div className="mb-10 mt-16 pt-10 border-t border-gray-100">
-              <span className="text-brand-orange text-xs font-semibold tracking-[0.22em] uppercase">Equipo especialista</span>
+          {/* Daniel */}
+          <AnimatedSection delay={0.1}>
+            <div className="flex justify-center">
+              <div className="w-full max-w-xs flex flex-col overflow-hidden border border-gray-100">
+                <div className="shrink-0">
+                  <img
+                    src={DANIEL.photo}
+                    alt={`Foto de ${DANIEL.name}`}
+                    className="w-full h-auto block"
+                  />
+                </div>
+                <div className="p-6 flex flex-col">
+                  <h3 className="font-black text-brand-black text-base leading-tight mb-1">{DANIEL.name}</h3>
+                  <p className="text-brand-orange text-xs font-semibold tracking-wide uppercase mb-3">{DANIEL.role}</p>
+                  <p className="text-brand-grey text-xs mb-3 leading-relaxed">{DANIEL.specialty}</p>
+                  <p className="text-gray-500 text-sm leading-relaxed">{DANIEL.bio}</p>
+                </div>
+              </div>
             </div>
           </AnimatedSection>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-            {EQUIPO.slice(2).map((m, i) => (
-              <AnimatedSection key={m.name} delay={i * 0.07}>
-                <div className="group h-full flex flex-col overflow-hidden border border-gray-100 hover:border-brand-orange/30 hover:shadow-lg transition-all duration-400">
-                  <div className="relative h-56 overflow-hidden shrink-0">
-                    <img
-                      src={m.photo}
-                      alt={`Foto de ${m.name}`}
-                      className="w-full h-full object-cover object-top transition-transform duration-600 group-hover:scale-[1.05]"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-brand-black/60 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-orange scale-x-0 group-hover:scale-x-100 transition-transform duration-400 origin-left" />
-                  </div>
-                  <div className="p-6 flex-1 flex flex-col">
-                    <h3 className="font-black text-brand-black text-base leading-tight mb-1">{m.name}</h3>
-                    <p className="text-brand-orange text-xs font-semibold tracking-wide uppercase mb-3">{m.role}</p>
-                    <p className="text-brand-grey text-xs mb-3 leading-relaxed">{m.specialty}</p>
-                    <p className="text-gray-500 text-sm leading-relaxed flex-1">{m.bio}</p>
-                  </div>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
 
         </div>
       </section>
