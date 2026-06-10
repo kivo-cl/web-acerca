@@ -1,63 +1,56 @@
 import { motion } from 'framer-motion'
+import { Search, Layers, Users, BarChart2, TrendingUp, Compass, PieChart, Gem } from 'lucide-react'
 import AnimatedSection from '../components/AnimatedSection'
 import CTAButton from '../components/CTAButton'
 import { WA_LINK } from '../constants'
 
 const SERVICIOS = [
   {
-    id: '01',
     title: 'Diagnóstico Estratégico Integral',
     desc: 'Análisis integral para identificar brechas críticas en estrategia, finanzas, estructura y gestión.',
-    image: 'https://picsum.photos/seed/svc-diagnostico/700/460',
+    icon: Search,
     featured: true,
   },
   {
-    id: '02',
     title: 'Arquitectura de Modelo de Negocio',
     desc: 'Definición o rediseño del modelo para mejorar propuesta de valor, márgenes y escalabilidad.',
-    image: 'https://picsum.photos/seed/svc-modelo/700/460',
+    icon: Layers,
     featured: false,
   },
   {
-    id: '03',
     title: 'Programa de Acompañamiento Ejecutivo',
     desc: 'Acompañamiento estructurado con foco en implementación, seguimiento y resultados medibles.',
-    image: 'https://picsum.photos/seed/svc-acompanamiento/700/460',
+    icon: Users,
     featured: false,
   },
   {
-    id: '04',
     title: 'Evaluación Estratégica de Proyectos e Inversiones',
     desc: 'Análisis financiero y estratégico para decidir inversiones con claridad y minimizar riesgos.',
-    image: 'https://picsum.photos/seed/svc-proyectos/700/460',
+    icon: BarChart2,
     featured: false,
   },
   {
-    id: '05',
     title: 'Estrategia y Estructura Comercial',
     desc: 'Estructuración de procesos comerciales, mejora de conversión y profesionalización de ventas.',
-    image: 'https://picsum.photos/seed/svc-comercial/700/460',
+    icon: TrendingUp,
     featured: false,
   },
   {
-    id: '06',
     title: 'Diseño de Estrategia Corporativa',
     desc: 'Definición de objetivos, prioridades y hoja de ruta alineada a crecimiento sostenible.',
-    image: 'https://picsum.photos/seed/svc-estrategia/700/460',
+    icon: Compass,
     featured: true,
   },
   {
-    id: '07',
     title: 'Finanzas Estratégicas y Control de Gestión',
     desc: 'Orden financiero, estructura de costos, control presupuestario y análisis de rentabilidad.',
-    image: 'https://picsum.photos/seed/svc-finanzas/700/460',
+    icon: PieChart,
     featured: true,
   },
   {
-    id: '08',
     title: 'Valorización y Creación de Valor Empresarial',
     desc: 'Determinación de valor para procesos de inversión, venta, incorporación de socios o decisiones estratégicas.',
-    image: 'https://picsum.photos/seed/svc-valorizacion/700/460',
+    icon: Gem,
     featured: false,
   },
 ]
@@ -93,25 +86,16 @@ export default function Servicios() {
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICIOS.map((s, i) => (
-              <AnimatedSection key={s.id} delay={i * 0.06}>
+              <AnimatedSection key={s.title} delay={i * 0.06}>
                 <div className={`group h-full flex flex-col overflow-hidden border transition-all duration-300 hover:shadow-lg ${
                   s.featured ? 'border-brand-orange/30' : 'border-gray-100 hover:border-brand-orange/30'
                 }`}>
 
-                  {/* Image */}
-                  <div className="relative h-52 overflow-hidden shrink-0">
-                    <img
-                      src={s.image}
-                      alt={s.title}
-                      className="w-full h-full object-cover transition-transform duration-600 group-hover:scale-[1.06]"
-                    />
-                    <div className="absolute inset-0 bg-brand-black/35 group-hover:bg-brand-black/20 transition-colors duration-400" />
-                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-orange scale-x-0 group-hover:scale-x-100 transition-transform duration-400 origin-left" />
-                    <span className="absolute top-4 left-4 bg-brand-orange text-white text-xs font-black px-2.5 py-1 leading-none">
-                      {s.id}
-                    </span>
+                  {/* Icon header */}
+                  <div className="relative bg-brand-black px-8 py-8 flex items-center shrink-0">
+                    <s.icon className="w-10 h-10 text-brand-orange" strokeWidth={1.5} />
                     {s.featured && (
-                      <span className="absolute top-4 right-4 bg-white text-brand-black text-[10px] font-black px-2 py-1 leading-none tracking-wide uppercase">
+                      <span className="absolute top-4 right-4 bg-brand-orange text-white text-[10px] font-black px-2 py-1 leading-none tracking-wide uppercase">
                         Destacado
                       </span>
                     )}
