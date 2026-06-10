@@ -356,7 +356,7 @@ export default function Home() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.9, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <img src="https://picsum.photos/seed/acerca-feature/1000/700"
+            <img src="/images/home-2.jpg"
               alt="Equipo Acerca Consultores"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
             <div className="absolute inset-0 bg-brand-black/30" />
