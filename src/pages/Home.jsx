@@ -545,7 +545,7 @@ export default function Home() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.9, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <img src="https://picsum.photos/seed/acerca-cta/1000/800" alt=""
+            <img src="/images/CTA.jpg" alt=""
               className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-brand-black/20" />
           </motion.div>
