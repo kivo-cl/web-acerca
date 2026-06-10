@@ -66,7 +66,7 @@ export default function QuienesSomos() {
             transition={{ duration: 0.9, ease: [0.25, 0.1, 0.25, 1] }}
           >
             <img
-              src="https://picsum.photos/seed/qs-cultura/900/700"
+              src="/images/quienes-somos.jpg"
               alt="Cultura Acerca Consultores"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
             />
@@ -142,7 +142,7 @@ export default function QuienesSomos() {
           {/* Daniel */}
           <AnimatedSection delay={0.1}>
             <div className="flex justify-center">
-              <div className="w-full max-w-[280px] flex flex-col overflow-hidden bg-white border border-gray-100 shadow-sm">
+              <div className="w-full max-w-sm flex flex-col overflow-hidden bg-white border border-gray-100 shadow-sm">
                 <div className="relative aspect-[3/4] overflow-hidden shrink-0">
                   <img
                     src={DANIEL.photo}
