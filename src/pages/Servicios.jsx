@@ -79,38 +79,41 @@ export default function Servicios() {
       </section>
 
       {/* ─── TODOS LOS SERVICIOS ─── */}
-      <section className="py-24 lg:py-32 bg-white">
+      <section className="py-24 lg:py-32 bg-[#f5f4f0]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <AnimatedSection>
             <h2 className="text-3xl font-black text-brand-black mb-12">Todos los servicios</h2>
           </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
             {SERVICIOS.map((s, i) => (
               <AnimatedSection key={s.title} delay={i * 0.06}>
-                <div className={`group h-full flex flex-col overflow-hidden border transition-all duration-300 hover:shadow-lg ${
-                  s.featured ? 'border-brand-orange/30' : 'border-gray-100 hover:border-brand-orange/30'
+                <div className={`group h-full flex flex-col bg-white p-8 transition-all duration-300 hover:shadow-md ${
+                  s.featured ? 'border-l-2 border-brand-orange' : 'border-l-2 border-transparent hover:border-brand-orange/40'
                 }`}>
 
-                  {/* Icon header */}
-                  <div className="relative bg-brand-black px-8 py-8 flex items-center shrink-0">
-                    <s.icon className="w-10 h-10 text-brand-orange" strokeWidth={1.5} />
-                    {s.featured && (
-                      <span className="absolute top-4 right-4 bg-brand-orange text-white text-[10px] font-black px-2 py-1 leading-none tracking-wide uppercase">
-                        Destacado
-                      </span>
-                    )}
+                  {/* Icon */}
+                  <div className="inline-flex items-center justify-center w-11 h-11 bg-brand-orange/10 mb-6 shrink-0">
+                    <s.icon className="w-5 h-5 text-brand-orange" strokeWidth={1.75} />
                   </div>
 
-                  {/* Content */}
-                  <div className="p-7 flex flex-col flex-1">
-                    <h2 className="font-black text-brand-black text-xl leading-tight mb-3 group-hover:text-brand-orange transition-colors duration-300">
-                      {s.title}
-                    </h2>
-                    <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-6">{s.desc}</p>
-                    <CTAButton href={WA_LINK} variant="outline-dark" className="text-xs py-2.5 px-5 self-start">
-                      Más información
-                    </CTAButton>
-                  </div>
+                  {/* Title */}
+                  <h2 className="font-black text-brand-black text-base leading-snug mb-2 group-hover:text-brand-orange transition-colors duration-300">
+                    {s.title}
+                  </h2>
+
+                  {/* Badge */}
+                  {s.featured && (
+                    <span className="self-start text-[10px] font-black tracking-widest uppercase text-brand-orange border border-brand-orange/50 px-2 py-0.5 mb-3">
+                      Destacado
+                    </span>
+                  )}
+
+                  <p className="text-gray-500 text-sm leading-relaxed flex-1 mt-3 mb-6">{s.desc}</p>
+
+                  <a href={WA_LINK} target="_blank" rel="noopener noreferrer"
+                    className="self-start text-xs font-semibold text-brand-black tracking-wide uppercase border-b border-brand-black/30 pb-0.5 hover:text-brand-orange hover:border-brand-orange transition-colors duration-200">
+                    Más información →
+                  </a>
                 </div>
               </AnimatedSection>
             ))}
